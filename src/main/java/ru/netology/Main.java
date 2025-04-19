@@ -48,7 +48,7 @@ public class Main {
             for (String text : texts) {
                 if (text.length() >= 3 && text.length() <= 5) {
                     StringBuilder sb = new StringBuilder(text);
-                    if (text.equals(sb.reverse().toString())) {
+                    if (text.equals(sb.reverse().toString()) && !text.chars().allMatch(x -> x == text.charAt(0))) {
                         switch (text.length()) {
                             case 3:
                                 count3.getAndIncrement();
